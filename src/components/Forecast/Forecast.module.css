@@ -1,0 +1,63 @@
+.Field {
+    display: block;
+    width: 400px;
+    height: 35px;
+    border: grey solid 1px;
+    border: 1px solid #EEEEEE;
+    padding: 15px;
+    border-radius: 35px;
+    margin: 5px auto;
+    margin-top: 20px;
+    box-shadow: 5px 5px 15px #bfa8bc;
+    font-size: 20px;
+}
+
+.Field:focus {
+    outline: none;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px rgb(50, 100, 153);
+}
+
+.AutocompleteList {
+    display: block;
+    width: 400px;
+    height: 35px;
+    align-items: center;
+    border: grey solid 1px;
+    border: 1px solid #EEEEEE;
+    padding: 10px;
+    border-radius: 35px;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.AutocompleteList:hover {
+    background-color: #e9e9e9; 
+}
+
+input .Radio {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    gap: 20px
+}
+
+.Button {
+    display: block;
+    margin: 20px auto;
+    margin-top: 20px;
+    padding: .5rem;
+    font-size: 1em;
+    background: darkcyan;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px #bfa8bc;
+    color: rgb(255, 255, 255);
+    font-family: 'Fredoka', sans-serif;
+    cursor: pointer;
+}
+
+.ContentCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
