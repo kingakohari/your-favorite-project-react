@@ -4,7 +4,48 @@ import Pictures from './pictures'
 
 
 
-const conditions = (props) => {
+const Conditions = (props) => {
+
+    const hasKeys = !!Object.keys(props.responseObj).length;
+    let hatter = "Day_";
+
+    let mainWeather = "Clear";
+    if (hasKeys === true) {
+        mainWeather = props.responseObj.weather[0].main;
+        
+        let sunrise = props.responseObj.sys.sunrise;
+        const sunriseHour = new Date(sunrise * 1000).getHours();
+        let sunriseMin = sunriseHour - 1;
+        let sunriseMax = sunriseHour + 1;
+        
+        let sunset = props.responseObj.sys.sunset;
+        const sunsetHour = new Date(sunset * 1000).getHours();
+        let sunsetMin = sunsetHour - 1;
+        let sunsetMax = sunsetHour + 1;
+
+        let currentHour = new Date().getHours();
+
+        if(currentHour >= sunsetMin && currentHour <= sunsetMax){
+            let sunsetPicture = 'Sunset_';
+            hatter = sunsetPicture;
+
+        } else  if(currentHour >= sunriseMin && currentHour <= sunriseMax){
+            let sunrisePicture = 'Sunrise_';
+            hatter = sunrisePicture;
+
+        } else if (currentHour > sunriseMax && currentHour < sunsetMin){
+            let dayPicture = 'Day_';
+            hatter = dayPicture;
+
+        } else if(currentHour < sunriseMin && currentHour > sunsetMax){
+            let nightPicture = 'Night_';
+            hatter = nightPicture;
+
+        };
+
+    }
+    
+    const imageSrc = require('./img/' + hatter + mainWeather + '.png');
     
     return (
         <div className = {classes.Wrapper}>
@@ -18,7 +59,7 @@ const conditions = (props) => {
 
             {props.responseObj.cod === 200 ?
                 <div className={classes.CardCont}>
-                    <img className={classes.Background} src={require('./img/' + props.responseObj.weather[0].main + '.png')} alt={Pictures.title} />
+                    <img className={classes.Background} src={imageSrc} alt={Pictures.title} />
                     <button className={classes.ToggleFav} onClick={props.favFunc}>Toggle Favourite</button> 
                     <div className={classes.DataCont}>
                         <p className={classes.Temp}>{Math.round(props.responseObj.main.temp)}°</p>
@@ -50,5 +91,5 @@ const conditions = (props) => {
         </div>
     )
 }
-export default conditions;
+export default Conditions;
 

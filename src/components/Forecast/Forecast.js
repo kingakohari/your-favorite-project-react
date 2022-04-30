@@ -3,7 +3,6 @@ import Conditions from '../Conditions/Conditions';
 import classes from './Forecast.module.css';
 import cityList from './city-list.json';
 
-
 const Forecast = () => {
 
     let [city, setCity] = useState('');
@@ -12,7 +11,7 @@ const Forecast = () => {
     let [loading, setLoading] = useState(false);
     let [responseObj, setResponseObj] = useState({});
     let [autocompleteList, setAutocomplete] = useState([]);
-    let [favouriteList, setFavourite] = useState(JSON.parse(localStorage.getItem('fav-list')) || []);
+    let [favouriteList, setFavourite] = useState([]);
     
     const getForecast = (e) => {
         e.preventDefault();
@@ -42,7 +41,6 @@ const Forecast = () => {
             });
         }, 2000);
     };
-
 
     const autocompleteComponent = (city, i, inputValue) => {
         return (
@@ -118,8 +116,8 @@ const Forecast = () => {
         const selectedCity = e.target.innerText;
         setCity(selectedCity);
         setAutocomplete([]);
-    };       
-    
+    };          
+
     return (
         <div className={classes.ContentCont}>
             <h2>Find Current Weather Conditions</h2>
