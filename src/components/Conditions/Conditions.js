@@ -6,7 +6,7 @@ import Pictures from './pictures'
 
 const Conditions = (props) => {
 
-    const hasKeys = !!Object.keys(props.responseObj).length;
+    const hasKeys = !!Object.keys(props.responseObj).length; // komment ide magyarázatnak
     let hatter = "Day_";
 
     let mainWeather = "Clear";
@@ -14,7 +14,7 @@ const Conditions = (props) => {
         mainWeather = props.responseObj.weather[0].main;
         
         let sunrise = props.responseObj.sys.sunrise;
-        const sunriseHour = new Date(sunrise * 1000).getHours();
+        const sunriseHour = new Date(sunrise * 1000).getHours(); // komment ide magyarázatnak
         let sunriseMin = sunriseHour - 1;
         let sunriseMax = sunriseHour + 1;
         
@@ -25,11 +25,11 @@ const Conditions = (props) => {
 
         let currentHour = new Date().getHours();
 
-        if(currentHour >= sunsetMin && currentHour <= sunsetMax){
+        if (currentHour >= sunsetMin && currentHour <= sunsetMax){
             let sunsetPicture = 'Sunset_';
             hatter = sunsetPicture;
 
-        } else  if(currentHour >= sunriseMin && currentHour <= sunriseMax){
+        } else if (currentHour >= sunriseMin && currentHour <= sunriseMax){
             let sunrisePicture = 'Sunrise_';
             hatter = sunrisePicture;
 
@@ -37,7 +37,7 @@ const Conditions = (props) => {
             let dayPicture = 'Day_';
             hatter = dayPicture;
 
-        } else if(currentHour < sunriseMin && currentHour > sunsetMax){
+        } else if (currentHour < sunriseMin && currentHour > sunsetMax){
             let nightPicture = 'Night_';
             hatter = nightPicture;
 

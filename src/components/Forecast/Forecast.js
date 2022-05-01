@@ -120,48 +120,50 @@ const Forecast = () => {
 
     return (
         <div className={classes.ContentCont}>
-            <h2>Find Current Weather Conditions</h2>
-            <form onSubmit = {getForecast}>
-            <input
-                    type = 'text'
-                    placeholder = 'Enter City'
-                    maxLength = "50"
-                    className = {classes.Field}
-                    value= {city}
-                    onChange = {getAutocomplete}
-                    onFocus = {getFavourites}
-                    />
-                <div>{autocompleteList}</div>
-                <label>
-                    <input
-                        type = 'radio'
-                        name = 'units'
-                        className = {classes.Radio}
-                        checked = {unit === 'imperial'}
-                        value = 'imperial'
-                        onChange = {(e) => setUnit(e.target.value)}
+            <div className={classes.mainWrapper}>
+                <h2>Find Current Weather Conditions</h2>
+                <form onSubmit = {getForecast}>
+                <input
+                        type = 'text'
+                        placeholder = 'Enter City'
+                        maxLength = "50"
+                        className = {classes.Field}
+                        value= {city}
+                        onChange = {getAutocomplete}
+                        onFocus = {getFavourites}
                         />
-                    Fahrenheit
-                </label>
-                <label>
-                    <input
-                        type = 'radio'
-                        name = 'units'
-                        className = {classes.Radio}
-                        checked = {unit === 'metric'}
-                        value = 'metric'
-                        onChange = {(e) => setUnit(e.target.value)}
-                        />
-                    Celsius
-                </label>
-                <button className={classes.Button} type='submit' disable='loading'>Show Current Weather</button>
-            </form>
-            <Conditions
-              responseObj = {responseObj}
-              error = {error}
-              loading = {loading}
-              favFunc = {toggleFavourites}
-            />
+                    <div>{autocompleteList}</div>
+                    <label>
+                        <input
+                            type = 'radio'
+                            name = 'units'
+                            className = {classes.Radio}
+                            checked = {unit === 'imperial'}
+                            value = 'imperial'
+                            onChange = {(e) => setUnit(e.target.value)}
+                            />
+                        Fahrenheit
+                    </label>
+                    <label>
+                        <input
+                            type = 'radio'
+                            name = 'units'
+                            className = {classes.Radio}
+                            checked = {unit === 'metric'}
+                            value = 'metric'
+                            onChange = {(e) => setUnit(e.target.value)}
+                            />
+                        Celsius
+                    </label>
+                    <button className={classes.Button} type='submit' disable='loading'>Show Current Weather</button>
+                </form>
+                <Conditions
+                responseObj = {responseObj}
+                error = {error}
+                loading = {loading}
+                favFunc = {toggleFavourites}
+                />
+            </div>
         </div>
     )
 }
