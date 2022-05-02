@@ -6,7 +6,7 @@ import Forecast from './components/Forecast/Forecast'
 function App() {
 
   const background = {
-    backgroundImage: 'url(https://source.unsplash.com/random/?city,weather)',
+    backgroundImage: 'url(https://source.unsplash.com/random/?weather)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   }

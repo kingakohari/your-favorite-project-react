@@ -2,11 +2,14 @@
   display: flex;
   flex-direction: column;
   min-height: 100px;
-    
+  align-items: center;
+  justify-content: center;
 }
 
 .NotFound {
   color: rgb(255, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .LoadingSpinner {
@@ -31,15 +34,12 @@
 }
 
 .CardCont {
+  position: relative;
   width: 300px;
   height: 500px;
-  top: 41%;
-  left: 17%;
-  margin: 20px 0;
-  margin-right: 200px;
+  margin: 0;
   box-shadow: rgba(9, 30, 66, 0.50) 0px 4px 8px -2px, rgba(9, 30, 66, 0.16) 0px 0px 0px 1px;
   background-size: cover;
-  
 }
 
 .CardCont p {
@@ -48,10 +48,12 @@
 
 .DataCont {
   position: absolute;
-  margin: 50px 0;
-  transform: translateY(-230%); 
+  top: 50%;
+  left: 50%;
+  min-width: 200px;
+  padding: 0;
+  transform: translate(-50%, -50%);
   font-weight: 700;
-  z-index: 100;
   color: #ffffff;
 }
 
@@ -68,20 +70,19 @@
   font-size: 20px;
 }
 
-.ExtraCont {
-  margin-top: 125px;
+.City {
+  color: #000000;
 }
 
-.ExtraCont div {
+.DataCont div {
   display: flex;
+  min-width: 200px;
   justify-content: space-between;
   margin: 5px 20px;
-  padding: 8px 0;
+  padding: 3px 0;
   border-bottom: 2px solid hsl(0, 0%, 60%);
-  font-weight: 700;
-  color:rgb(255, 255, 255);
+  font-size: 14px;
 }
-
 
 .Background {
   width: 300px;
@@ -89,11 +90,24 @@
 }
 
 .ToggleFav {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 5px 15px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  box-shadow: inset 0px 5px 10px 0px #bfa8bc;
+  text-transform: uppercase;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+}
+
+/*   margin-top: 20px;
   border: 2px solid darkcyan;
   background: #FFFFFF; 
-  border-radius: 20px;
-}
+  border-radius: 20px; */
+
 
 /* CINTI REGI WEATHERAPP */
 

@@ -65,25 +65,19 @@ const Conditions = (props) => {
                         <p className={classes.Temp}>{Math.round(props.responseObj.main.temp)}°</p>
                         <p className={classes.Desc}>{props.responseObj.weather[0].main}</p>
                         <img src={`http://openweathermap.org/img/wn/${props.responseObj.weather[0].icon}.png`} alt={`${props.responseObj.weather[0].description}`} />
-                        <p className={classes.City}>{props.responseObj.name}</p>
-                        <p className={classes.City}>{props.responseObj.sys.country}</p>
-                    </div>
-                    <div className={classes.ExtraCont}>
-                        <div className={classes.Feelslike}>
-                            <img src={require('./img2/good-review.png')} alt='Feels like icon'/>
-                            <h3 className="temp">Feels like</h3>                            
-                            <h2 className="temp">{Math.round(props.responseObj.main.feels_like)}°</h2>
+                        <p className={classes.City}>{props.responseObj.name}, {props.responseObj.sys.country}</p>
+                        <div>
+                            <h3 className="temp">Feels like</h3> 
+                            <h3 className="temp">{Math.round(props.responseObj.main.feels_like)}°</h3> 
                         </div>
-                        <div className={classes.Humidity}>
-                            <img src={require('./img2/humidity.png')} alt='Humidity icon'/>
-                            <h4 className="temp">Humidity</h4>
-                            <h2 className="temp">{props.responseObj.main.humidity} %</h2>
+                        <div>
+                            <h3 className="temp">Humidity</h3>
+                            <h3 className="temp">{props.responseObj.main.humidity}%</h3>
                         </div>
-                        <div className={classes.Wind}>
-                            <img src={require('./img2/wind.png')} alt='Wind icon'/>
-                            <h3 className="temp">Wind</h3>                            
-                            <h2 className="temp">{props.responseObj.wind.speed} km/h</h2>
-                        </div>
+                        <div>
+                            <h3 className="temp">Wind</h3>                                 
+                            <h3 className="temp">{Math.round(props.responseObj.wind.speed)} km/h</h3>
+                        </div>                          
                     </div>
                 </div>
             : null

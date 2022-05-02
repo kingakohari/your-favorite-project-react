@@ -1,3 +1,11 @@
+.ContentCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(191, 191, 194, 0.7)
+}
+
 .Field {
     display: block;
     width: 400px;
@@ -7,7 +15,6 @@
     padding: 15px;
     border-radius: 35px;
     margin: 5px auto;
-    margin-top: 20px;
     box-shadow: 5px 5px 15px #bfa8bc;
     font-size: 20px;
 }
@@ -42,30 +49,35 @@
 }
 
 .Button {
-    display: block;
+    margin: 15px;
+    padding: 12px 35px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;           
+    box-shadow: 5px 5px 15px #bfa8bc;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    color: #fff; 
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    }
+    
+/*     display: block;
     margin: 20px auto;
     margin-top: 20px;
-    padding: .5rem;
+    padding: 0.5em;
     font-size: 1em;
     background: darkcyan;
     border-radius: 25px;
     box-shadow: 5px 5px 15px #bfa8bc;
-    color: rgb(255, 255, 255);
-    font-family: 'Fredoka', sans-serif;
-    cursor: pointer;
-}
+    color: rgb(255, 255, 255); */
 
-.ContentCont {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: grey;
-    opacity: 0.7;
-}
 
-.mainWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
