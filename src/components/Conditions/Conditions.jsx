@@ -3,10 +3,9 @@ import classes from './Conditions.module.css'
 import Pictures from './pictures'
 
 
-
 const Conditions = (props) => {
-
-    const hasKeys = !!Object.keys(props.responseObj).length; // komment ide magyarázatnak
+    
+    const hasKeys = !!Object.keys(props.responseObj).length;
     let hatter = "Day_";
 
     let mainWeather = "Clear";
@@ -14,7 +13,7 @@ const Conditions = (props) => {
         mainWeather = props.responseObj.weather[0].main;
         
         let sunrise = props.responseObj.sys.sunrise;
-        const sunriseHour = new Date(sunrise * 1000).getHours(); // komment ide magyarázatnak
+        const sunriseHour = new Date(sunrise * 1000).getHours();
         let sunriseMin = sunriseHour - 1;
         let sunriseMax = sunriseHour + 1;
         
@@ -25,11 +24,11 @@ const Conditions = (props) => {
 
         let currentHour = new Date().getHours();
 
-        if (currentHour >= sunsetMin && currentHour <= sunsetMax){
+        if(currentHour >= sunsetMin && currentHour <= sunsetMax){
             let sunsetPicture = 'Sunset_';
             hatter = sunsetPicture;
 
-        } else if (currentHour >= sunriseMin && currentHour <= sunriseMax){
+        } else  if(currentHour >= sunriseMin && currentHour <= sunriseMax){
             let sunrisePicture = 'Sunrise_';
             hatter = sunrisePicture;
 
@@ -37,27 +36,24 @@ const Conditions = (props) => {
             let dayPicture = 'Day_';
             hatter = dayPicture;
 
-        } else if (currentHour < sunriseMin && currentHour > sunsetMax){
+        } else if(currentHour < sunriseMin && currentHour > sunsetMax){
             let nightPicture = 'Night_';
             hatter = nightPicture;
 
         };
 
     }
-    
     const imageSrc = require('./img/' + hatter + mainWeather + '.png');
-    
+
     return (
         <div className = {classes.Wrapper}>
             {props.error && <p className={classes.NotFound}>Please enter a valid city.</p>}
             {props.loading && 
             <div className={classes.SpinnerContainer}>
-                <div className={classes.LoadingSpinner}>
-                </div>
+                <div className={classes.LoadingSpinner}/>
             </div>}
-
-
-            {props.responseObj.cod === 200 ?
+           
+            {props.responseObj.cod === 200 ?       
                 <div className={classes.CardCont}>
                     <img className={classes.Background} src={imageSrc} alt={Pictures.title} />
                     <button className={classes.ToggleFav} onClick={props.favFunc}>Toggle Favourite</button> 
@@ -85,5 +81,5 @@ const Conditions = (props) => {
         </div>
     )
 }
-export default Conditions;
 
+export default Conditions;

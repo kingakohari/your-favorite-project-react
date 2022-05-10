@@ -11,7 +11,7 @@ const Forecast = () => {
     let [loading, setLoading] = useState(false);
     let [responseObj, setResponseObj] = useState({});
     let [autocompleteList, setAutocomplete] = useState([]);
-    let [favouriteList, setFavourite] = useState([]);
+    let [favouriteList, setFavourite] = useState(JSON.parse(localStorage.getItem('fav-list')) || []);
     
     const getForecast = (e) => {
         e.preventDefault();
@@ -157,10 +157,10 @@ const Forecast = () => {
                 <button className={classes.Button} type='submit' disable='loading'>Show Weather</button>
             </form>
             <Conditions
-            responseObj = {responseObj}
-            error = {error}
-            loading = {loading}
-            favFunc = {toggleFavourites}
+              responseObj = {responseObj}
+              error = {error}
+              loading = {loading}
+              favFunc = {toggleFavourites}
             />
         </div>
     )
