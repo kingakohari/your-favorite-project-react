@@ -1,27 +1,43 @@
 import React from 'react';
 import './App.css';
 import Forecast from "./components/Forecast/Forecast"
+/* import { createTheme, ThemeProvider } from '@mui/material/styles';
+ const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#ffd699',
+      main: '#ffa726',
+      dark: '#b2741a',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#d4e157',
+      main: '#8bc34a',
+      dark: '#618833',
+      contrastText: '#000',
+    },
+  },
+}); */
 
 
 function App() {
   const background = {
-    backgroundImage: 'url(https://source.unsplash.com/random/?weather)',
+    backgroundImage: 'url(https://source.unsplash.com/random/?weather,orange)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   }
 
   return (
+   
       <div className="App">
-        {/* <header className="App-header">
-          <h1>React Weather App</h1>
-        </header> */}
         <main className="main" style={background}>
           <Forecast />
         </main>
         <footer>
           Page created by Brit Tudósok, Inc.
         </footer>
-    </div>
+      </div>
+  
   );
 }
 
