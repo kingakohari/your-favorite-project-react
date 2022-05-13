@@ -2,19 +2,34 @@ import React from 'react';
 import classes from './Conditions.module.css'
 import Pictures from './pictures'
 import Button from '@mui/material/Button';
-/* import { createTheme } from '@material-ui/core/styles';
 import { makeStyles } from "@material-ui/core/styles";
 import orange from '@material-ui/core/colors/orange';
- const theme = createTheme({
-    palette: {
-      primary: orange
+ 
+const useStyles = makeStyles({
+    root: {
+        position: 'absolute',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        bottom: '-2%',
+        marginTop: '10',
+        padding: '5 15px',
+        border: '1 solid #000000',
+        borderRadius: '25',
+        boxShadow: 'inset 0 5 10 0 #bfa8bc',
+        textTransform: 'uppercase',
+        fontFamily: 'Fredoka',
+        fontSize: '16',
+        color: '#ffffff',
+        background: 'transparent',
+        cursor: 'pointer',
+        zIndex: '1'
     }
 });
-const useStyles = makeStyles((theme) => ({
-    ToggleFav: {
-      color: theme.palette.primary
-    }
-  })); */
+
+function ToggleButton() {
+    const classes = useStyles()
+    return <Button className={classes.root}>Toggle Favourite</Button> 
+}
 
 const Conditions = (props) => {
     
@@ -70,7 +85,7 @@ const Conditions = (props) => {
             {props.responseObj.cod === 200 ?       
                 <div className={classes.CardCont}>
                     <img className={classes.Background} src={imageSrc} alt={Pictures.title} />
-                    <Button variant="outlined" color="primary" className={classes.ToggleFav} onClick={props.favFunc}>Toggle Favourite</Button> 
+                    <ToggleButton onClick={props.favFunc}>Toggle Favourite</ToggleButton> 
                     <div className={classes.DataCont}>
                         <p className={classes.Temp}>{Math.round(props.responseObj.main.temp)}°</p>
                         <p className={classes.Desc}>{props.responseObj.weather[0].main}</p>

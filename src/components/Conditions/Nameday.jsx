@@ -55,8 +55,7 @@ const Nameday = () => {
     return (
         <div className={classes.Extra_hot}>
             <h2>{today}</h2>
-            {/*             <button onClick={getName}>Get Name</button> 
-            <button onClick={getQuotes}>Daily wisdom</button>  */}
+        
             {resName &&
                 <>
                     <h3>Namedays in Hungary today:</h3>
