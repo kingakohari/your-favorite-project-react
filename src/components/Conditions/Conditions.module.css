@@ -15,8 +15,8 @@
 .LoadingSpinner {
   width: 80px;
   height: 80px;
-  border: 5px solid rgb(202, 89, 89);
-  border-top: 3px solid rgb(221, 197, 60);
+  border: 5px solid rgb(245,158,141);
+  border-top: 3px solid rgb(51,45,83);
   border-radius: 100%;
   animation: spin 1.5s linear infinite
 }
@@ -60,7 +60,7 @@
 }
 
 .Temp {
-  margin: 50px 0px 0px 0px;
+  margin: 0;
   font-size: 70px;
   font-weight: 400;
 }
@@ -71,7 +71,6 @@
 }
 
 .City {
-  margin: 0 0 60px 0;
   color: #ffffff;
   font-size: 30px;
   font-weight: 600;
@@ -92,29 +91,41 @@
   position: absolute;
   width: 300px;
   height: 500px;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
- .ToggleFav {
+ .Favorite {
   position: absolute;
   left: 50%;
+  top: 500px;
   transform: translateX(-50%);
-  bottom: -2%;
   margin-top: 10px;
-  padding: 5px 15px;
-  border: 1px solid #000000;
-  border-radius: 25px;
-  box-shadow: inset 0px 5px 10px 0px #bfa8bc;
+  width: 180px;
+  height: 30px;
+  border: 0px;
+  border-radius: 10px;
+  box-shadow: rgb(89 46 206 / 20%) 0 -25px 18px -14px inset, rgb(94 44 187 / 15%) 0 1px 2px, rgb(145 47 202 / 15%) 0 2px 4px, rgb(165 44 187 / 15%) 0 4px 8px, rgb(146 44 187 / 15%) 0 8px 16px, rgb(166 50 195 / 15%) 0 16px 32px;
   text-transform: uppercase;
   font-family: 'Fredoka', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #ffffff;
   background: transparent;
   cursor: pointer;
-  z-index: 1;
-} 
+  z-index: 100;
+}
 
-/* .ToggleFav{
+/* .Favorite {
+  z-index: 99;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size:18px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+} */
+
+/* .Favorite{
   position: relative;
   display: inline-block;
   font-size:18px;
@@ -125,7 +136,7 @@
   font-weight: 500;
   z-index: 100;
 }
-.ToggleFav:before{
+.Favorite:before{
   content: '';
   position: absolute;
   top: 0;
@@ -137,10 +148,6 @@
   z-index: -1;
   transition: all ease 0.5s;
 }
-.ToggleFav:hover:before{
+.Favorite:hover:before{
   width: 100%;  
   } */
-
-
-
-

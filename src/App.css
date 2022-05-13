@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
 
 .App {
   display: flex;
@@ -7,11 +8,16 @@
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Fredoka', sans-serif;
+  background-image: url('2794169.jpg');
+  backdrop-filter: blur(4px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 main {
   flex-grow: 1;
-  text-align: center;
   padding: 25px;  
 }
 
@@ -21,9 +27,10 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #36A9AE;
+  background: #2F294D;
   font-size: 12px;
   text-align: center;
+  color: white;
 }
 
 header {

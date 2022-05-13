@@ -9,7 +9,8 @@
     border-radius: 25px;
     align-items: center;
     width: 1000px;
-    background-color: rgba(191, 191, 194, 0.7);    
+    background-color: rgba(191, 191, 194, 0.7);
+    box-shadow: rgb(89 46 206 / 20%) 0 -25px 18px -14px inset, rgb(94 44 187 / 15%) 0 1px 2px, rgb(145 47 202 / 15%) 0 2px 4px, rgb(165 44 187 / 15%) 0 4px 8px, rgb(146 44 187 / 15%) 0 8px 16px, rgb(166 50 195 / 15%) 0 16px 32px;
 }
 
 
@@ -20,7 +21,7 @@
     border: grey solid 1px;
     border: 1px solid #EEEEEE;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
     margin: 5px auto;
     box-shadow: 5px 5px 15px #bfa8bc;
     font-size: 20px;
@@ -30,6 +31,7 @@
     outline: none;
     border-color: #719ECE;
     box-shadow: 0 0 10px rgb(50, 100, 153);
+    text-align: center;
 }
 
 .AutocompleteList {
@@ -40,10 +42,11 @@
     border: grey solid 1px;
     border: 1px solid #EEEEEE;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
     font-size: 20px;
     background-color: #fff;
     z-index: 2;
+    text-align: center;
 }
 
 .AutocompleteList:hover {
@@ -53,12 +56,11 @@
 .Radio {
     margin-bottom: 10px;
     margin-top: 20px;
-
 }
 
 .Button {
-    background: #5E5DF0;
-    border-radius: 100px;
+    background: #3f3864;
+    border-radius: 15px;
     box-shadow: rgba(89, 46, 206, 0.2) 0 -25px 18px -14px inset, rgba(94, 44, 187, 0.15) 0 1px 2px, rgba(145, 47, 202, 0.15) 0 2px 4px, rgba(165, 44, 187, 0.15) 0 4px 8px, rgba(146, 44, 187, 0.15) 0 8px 16px, rgba(166, 50, 195, 0.15) 0 16px 32px;
     color: #ffffff;
     cursor: pointer;
@@ -88,4 +90,8 @@ form {
 
 form input {
     text-align: center;
+}
+
+h2 {
+    color: #3f3864;
 }

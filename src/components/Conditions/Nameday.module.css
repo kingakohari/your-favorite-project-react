@@ -1,3 +1,39 @@
 .Extra_hot {
     text-align: center;
+    margin-top: 40px;
+}
+/* font-family: 'Ms Madi', cursive; */
+
+.Time {
+    font-family: 'Lexend Deca', sans-serif;
+    color: #3f3864;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow:  rgba(213, 76, 226, 0.35) 0 -25px 18px -14px inset, rgba(207, 39, 212, 0.25) 0 1px 2px, rgba(187, 51, 211, 0.25) 0 2px 4px, rgba(216, 79, 186, 0.25) 0 4px 8px, rgba(165, 53, 209, 0.25) 0 8px 16px, rgba(210, 66, 223, 0.25) 0 16px 32px;
+    ;
+}
+
+.Row {
+    font-family: 'Lexend Deca', sans-serif;
+    color: #3f3864;
+    font-size: 20px;
+}
+
+.Response {
+    font-family: 'Lexend Deca', sans-serif;
+    color: rgb(81, 14, 119);
+    font-size: 18px;
+}
+
+.Text {
+    font-family: 'Lexend Deca', sans-serif;
+    color: rgb(81, 14, 119);
+    font-size: 18px;
+}
+
+p span {
+    font-family: 'Carattere', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.05em
 }

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import classes from './Nameday.module.css'
 //import classes from './Conditions.module.css'
 
+
+
 const Nameday = () => {
     const [resName, setResName] = useState('')
     const [quote, setQuote] = useState('')
@@ -38,8 +40,6 @@ const Nameday = () => {
         []
     )
 
-    /* let today = new Date().toISOString().replace('T', ' ').substring(0, 10) */
-
     const day = new Date();
 
     let options = {
@@ -54,18 +54,18 @@ const Nameday = () => {
 
     return (
         <div className={classes.Extra_hot}>
-            <h2>{today}</h2>
-        
+            <h2 className={classes.Time}>{today}</h2>
+
             {resName &&
                 <>
-                    <h3>Namedays in Hungary today:</h3>
-                    <p>{resName}</p>
+                    <h3 className={classes.Row}>Namedays in Hungary today:</h3>
+                    <p className={classes.Response}>{resName}</p>
                 </>}
 
             {quote &&
                 <>
-                    <h3>Your takeaway for today:</h3>
-                    <p>"{quote}" - ({author})</p>
+                    <h3 className={classes.Row}>Your takeaway for today:</h3>
+                   <p className={classes.Text}><span>"{quote}"</span> - {author}</p> 
                 </>}
         </div>
     );

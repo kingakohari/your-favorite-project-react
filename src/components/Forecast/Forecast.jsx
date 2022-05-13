@@ -104,7 +104,8 @@ const Forecast = () => {
 
         if (listCopy.indexOf(reqName) === -1) {
             console.log('Added to favourites');
-            e.target.style.background = "linear-gradient(135deg, #f34079 40%, #fc894d)";
+            e.target.style.background = "#3f3864";
+            e.target.innerText = "Remove favourite"
             setFavourite([...listCopy, reqName]);
 
         } else {
@@ -112,6 +113,7 @@ const Forecast = () => {
             listCopy.splice(indexOfCity, 1);
             console.log('Removed from favourites');
             e.target.style.background = "transparent";
+            e.target.innerText = "Add favourite"
             setFavourite(listCopy);
         }
     };
@@ -149,8 +151,8 @@ const Forecast = () => {
                         defaultValue={unit[0]}
                         name="radio-buttons-group"
                     >
-                        <FormControlLabel value={unit[0]} /* onChange = {(e) => setUnit(e.target.value)} */ control={<Radio />} label="Celsius" />
-                        <FormControlLabel value={unit[1]} /* onChange = {(e) => setUnit(e.target.value)} */ control={<Radio />} label="Fahrenheit" />
+                        <FormControlLabel value={unit[0]} control={<Radio />} label="Celsius" />
+                        <FormControlLabel value={unit[1]} control={<Radio />} label="Fahrenheit" />
                         
                     </RadioGroup>
                 </FormControl>

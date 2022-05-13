@@ -21,16 +21,17 @@ import Forecast from "./components/Forecast/Forecast"
 
 
 function App() {
-  const background = {
-    backgroundImage: 'url(https://source.unsplash.com/random/?weather,orange)',
+/*   const background = {
+    backgroundImage: 'url'('2794169.jpg'),
+    filter: "blur"(4px);
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-  }
+  } */
 
   return (
    
       <div className="App">
-        <main className="main" style={background}>
+        <main className="main" /*style={background}*/>
           <Forecast />
         </main>
         <footer>

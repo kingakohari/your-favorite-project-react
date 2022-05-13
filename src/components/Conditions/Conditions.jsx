@@ -1,11 +1,9 @@
 import React from 'react';
 import classes from './Conditions.module.css'
 import Pictures from './pictures'
-import Button from '@mui/material/Button';
-import { makeStyles } from "@material-ui/core/styles";
-import orange from '@material-ui/core/colors/orange';
+/* import Button from '@mui/material/Button'; */
  
-const useStyles = makeStyles({
+/* const useStyles = makeStyles({
     root: {
         position: 'absolute',
         left: '50%',
@@ -25,11 +23,10 @@ const useStyles = makeStyles({
         zIndex: '1'
     }
 });
-
 function ToggleButton() {
     const classes = useStyles()
-    return <Button className={classes.root}>Toggle Favourite</Button> 
-}
+    return <Button className={classes.root}>Toggle Favourite</Button>
+}  */
 
 const Conditions = (props) => {
     
@@ -71,8 +68,9 @@ const Conditions = (props) => {
         };
 
     }
-
     const imageSrc = require('./img/' + hatter + mainWeather + '.png');
+
+   
 
     return (
         <div className = {classes.Wrapper}>
@@ -85,7 +83,7 @@ const Conditions = (props) => {
             {props.responseObj.cod === 200 ?       
                 <div className={classes.CardCont}>
                     <img className={classes.Background} src={imageSrc} alt={Pictures.title} />
-                    <ToggleButton onClick={props.favFunc}>Toggle Favourite</ToggleButton> 
+                    <button className={classes.Favorite} onClick={props.favFunc}>Toggle Favourite</button> 
                     <div className={classes.DataCont}>
                         <p className={classes.Temp}>{Math.round(props.responseObj.main.temp)}°</p>
                         <p className={classes.Desc}>{props.responseObj.weather[0].main}</p>
