@@ -156,7 +156,7 @@ const Forecast = () => {
                         
                     </RadioGroup>
                 </FormControl>
-                <button className={classes.Button} type='submit' disable='loading'>Show Weather</button>
+                <button className={classes.Button} type='submit' disabled={loading}>Show Weather</button>
             </form>
             <Conditions
                 responseObj={responseObj}
